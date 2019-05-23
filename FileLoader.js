@@ -44,7 +44,7 @@ class FilesLoader {
             let isFileMatched = identifierExist ? this.processFile(baseFileName, identifier) : true;
             let loadedFile;
             if(isFileMatched) loadedFile = require(path.resolve(filePath));
-            let objectType = Object.keys(loadedFile).length !== 0;
+            let objectType = loadedFile !== undefined && Object.keys(loadedFile).length !== 0;
             if(typeof loadedFile === 'function' || typeof loadedFile === objectType) loadedFilesArray.push(loadedFile); 
         }
         return loadedFilesArray;
