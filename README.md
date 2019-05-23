@@ -1,4 +1,4 @@
 
-Installing the pacakge
+Installation
 
 npm i onyx-file-loader
